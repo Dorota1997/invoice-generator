@@ -12,6 +12,9 @@ import { nameValidator, countValidator, priceValidator } from '../../validators'
 })
 export class GoodsListFormComponent implements OnInit {
   private fb = inject(FormBuilder);
+  invoiceForm!: FormGroup;
+  errorMessage = '';
+
   ngOnInit(): void {
     this.invoiceForm = this.createForm();
   }
