@@ -32,4 +32,9 @@ export class GoodsListFormComponent implements OnInit {
       price: [1, priceValidator()],
     });
   }
+
+  addItem(): void {
+    this.items.push(this.createItem());
+  }
+
 }
