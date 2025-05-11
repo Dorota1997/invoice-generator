@@ -46,4 +46,12 @@ export class GoodsListFormComponent implements OnInit {
     this.items.removeAt(index);
   }
 
+  onSubmit(): void {
+    this.errorMessage = '';
+
+    if (!this.items.length) {
+      this.errorMessage = 'Please add items';
+      return;
+    }
+  }
 }
