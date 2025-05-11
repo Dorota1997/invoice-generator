@@ -1,5 +1,14 @@
 <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
   <mat-card>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      class="invoice-form__button-width"
+      (click)="addItem()"
+    >
+      Add Item
+    </button>
 
     <div formArrayName="items">
       @for (item of items.controls; track item; let i = $index) {
@@ -42,6 +51,15 @@
         </div>
       }
     </div>
+
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit"
+      class="invoice-form__button-width"
+    >
+      Submit
+    </button>
 
   </mat-card>
 </form>
