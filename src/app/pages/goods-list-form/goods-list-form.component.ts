@@ -14,6 +14,11 @@ export class GoodsListFormComponent implements OnInit {
   ngOnInit(): void {
     this.invoiceForm = this.createForm();
   }
+
+  get items(): FormArray<FormGroup> {
+    return this.invoiceForm.get('items') as FormArray<FormGroup>;
+  }
+
   private createForm(): FormGroup {
     return this.fb.group({
       items: this.fb.array([]),
