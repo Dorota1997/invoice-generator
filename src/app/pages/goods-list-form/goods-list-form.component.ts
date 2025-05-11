@@ -37,4 +37,8 @@ export class GoodsListFormComponent implements OnInit {
     this.items.push(this.createItem());
   }
 
+  removeItem(index: number): void {
+    this.items.removeAt(index);
+  }
+
 }
