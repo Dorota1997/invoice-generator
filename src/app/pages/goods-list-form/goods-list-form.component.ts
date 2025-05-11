@@ -1,6 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray, ReactiveFormsModule } from '@angular/forms';
+import { nameValidator, countValidator, priceValidator } from '../../validators';
+
 @Component({
   selector: 'app-goods-list-form',
   imports: [CommonModule, ReactiveFormsModule],
@@ -15,6 +17,14 @@ export class GoodsListFormComponent implements OnInit {
   private createForm(): FormGroup {
     return this.fb.group({
       items: this.fb.array([]),
+    });
+  }
+
+  private createItem(): FormGroup {
+    return this.fb.group({
+      name: ['', nameValidator()],
+      count: [1, countValidator()],
+      price: [1, priceValidator()],
     });
   }
 }
