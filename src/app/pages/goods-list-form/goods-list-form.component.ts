@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray, ReactiveFormsModule } from '@angular/forms';
+import { materialModules } from '../../shared/material-imports';
 import { nameValidator, countValidator, priceValidator } from '../../validators';
 
 @Component({
   selector: 'app-goods-list-form',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, ...materialModules],
   templateUrl: './goods-list-form.component.html',
   styleUrl: './goods-list-form.component.scss',
 })
