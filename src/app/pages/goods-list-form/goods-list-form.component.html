@@ -61,5 +61,8 @@
       Submit
     </button>
 
+    @if (errorMessage) {
+      <div class="invoice-form__error">{{ errorMessage }}</div>
+    }
   </mat-card>
 </form>
