@@ -1,1 +1,32 @@
+$spacing-sm: 0.625rem;
+$spacing-xs: 0.3125rem;
+$spacing-md: 1rem;
+$field-min-width: 12.5rem;
+$button-width: 12.5rem;
 
+mat-card {
+  padding: $spacing-sm $spacing-xs;
+  height: 100vh;
+
+  .invoice-form__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+
+    mat-form-field {
+      flex: 1 1 $field-min-width;
+    }
+  }
+
+  .invoice-form__button-width {
+    width: $button-width;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.invoice-form__error {
+  color: red;
+  margin-top: $spacing-md;
+}
