@@ -64,6 +64,8 @@ export class GoodsListFormComponent implements OnInit {
     if (isAnyValid) {
       this.invoiceService.setItems(this.items.value);
       this.router.navigate(['/summary']);
+    } else {
+      this.errorMessage = 'Please correct errors before submitting';
     }
   }
 }
