@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { materialModules } from '../../shared/material-imports';
+import { materialModules } from '../../material-imports';
 
 @Component({
   selector: 'app-menu',
