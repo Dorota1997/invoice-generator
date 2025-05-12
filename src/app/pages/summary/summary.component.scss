@@ -45,4 +45,32 @@ $color-text: #000;
     }
   }
 
+  &__table-wrapper {
+    margin-bottom: $spacing-section;
+    overflow: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: $padding-base;
+      text-align: left;
+      font-size: $font-size-base;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: $color-header-bg;
+    }
+  }
+
+  &__total {
+    text-align: right;
+    font-weight: bold;
+    font-size: $font-size-total;
+    margin-top: $spacing-element;
+  }
 }
