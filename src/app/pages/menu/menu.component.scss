@@ -1,0 +1,16 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 1rem;
+
+  &__button {
+    font-weight: normal;
+    text-decoration: none;
+
+    &--active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
