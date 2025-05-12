@@ -1,6 +1,9 @@
+import { Router } from '@angular/router';
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray, ReactiveFormsModule } from '@angular/forms';
+
+import { InvoiceService } from '../../services/invoice.service';
 import { materialModules } from '../../shared/material-imports';
 import { nameValidator, countValidator, priceValidator } from '../../validators';
 
@@ -12,6 +15,8 @@ import { nameValidator, countValidator, priceValidator } from '../../validators'
 })
 export class GoodsListFormComponent implements OnInit {
   private fb = inject(FormBuilder);
+  private router = inject(Router);
+  private invoiceService = inject(InvoiceService);
   invoiceForm!: FormGroup;
   errorMessage = '';
 
@@ -52,6 +57,13 @@ export class GoodsListFormComponent implements OnInit {
     if (!this.items.length) {
       this.errorMessage = 'Please add items';
       return;
+    }
+
+    const isAnyValid = this.items.controls.some((item) => item.valid);
+
+    if (isAnyValid) {
+      this.invoiceService.setItems(this.items.value);
+      this.router.navigate(['/summary']);
     }
   }
 }
