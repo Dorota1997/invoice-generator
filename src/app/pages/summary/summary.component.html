@@ -1,0 +1,20 @@
+@if (!isLoading) {
+  <div class="summary__container">
+    <mat-card class="summary__card">
+      @if (companyInfo) {
+        <mat-card-header class="summary__company-header">
+          <div class="summary__company-info">
+            <div class="summary__company-info-name">{{ companyInfo.name }}</div>
+            <div class="summary__company-info-address">{{ companyInfo.address }}</div>
+            <div class="summary__company-info-phones">
+              Phones: {{ companyInfo.phones.join(', ') }}
+            </div>
+          </div>
+        </mat-card-header>
+      } @else {
+        <p>No company information available.</p>
+      }
+    </mat-card>
+
+  </div>
+}
