@@ -1,0 +1,76 @@
+$font-size-base: 1rem;
+$font-size-heading: 1.5rem;
+$font-size-total: 1.2rem;
+
+$spacing-section: 2rem;
+$spacing-element: 1rem;
+$padding-base: 0.75rem;
+
+$color-header-bg: #f5f5f5;
+$color-text: #000;
+
+.summary {
+  &__container {
+    padding: $spacing-element;
+    color: $color-text;
+  }
+
+  &__card {
+    margin-bottom: $spacing-section;
+    padding: $spacing-element;
+  }
+
+  &__company {
+    &-header {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-name {
+        margin: 0 0 0.5rem;
+        font-size: $font-size-heading;
+      }
+
+      &-address,
+      &-phones {
+        margin: 0.25rem 0;
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  &__table-wrapper {
+    margin-bottom: $spacing-section;
+    overflow: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: $padding-base;
+      text-align: left;
+      font-size: $font-size-base;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: $color-header-bg;
+    }
+  }
+
+  &__total {
+    text-align: right;
+    font-weight: bold;
+    font-size: $font-size-total;
+    margin-top: $spacing-element;
+  }
+}

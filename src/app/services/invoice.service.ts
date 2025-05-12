@@ -15,4 +15,8 @@ export class InvoiceService {
   getItems(): InvoiceItem[] {
     return this.itemsSubject.value;
   }
+
+  calculateTotal(items: InvoiceItem[]): number {
+    return items.reduce((sum, item) => sum + item.count * item.price, 0);
+  }
 }
