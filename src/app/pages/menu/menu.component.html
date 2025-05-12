@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="menu">
+  <button
+    mat-button
+    class="menu__button"
+    routerLink="/"
+    routerLinkActive="menu__button--active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Form
+  </button>
+  <button
+    mat-button
+    class="menu__button"
+    routerLink="/summary"
+    routerLinkActive="menu__button--active"
+  >
+    Summary
+  </button>
+</mat-toolbar>
