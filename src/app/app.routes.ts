@@ -8,4 +8,11 @@ export const routes: Routes = [
         (component) => component.GoodsListFormComponent
       ),
   },
+  {
+    path: 'summary',
+    loadComponent: () =>
+      import('./pages/summary/summary.component').then(
+        (component) => component.SummaryComponent
+      ),
+  },
 ];
